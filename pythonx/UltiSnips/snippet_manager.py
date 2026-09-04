@@ -190,7 +190,7 @@ class SnippetManager:
         vim.vars["ulti_expand_res"] = 1
         if not self._try_expand():
             vim.vars["ulti_expand_res"] = 0
-            self._handle_failure(self.expand_trigger, True)
+            self._handle_failure(self.expand_trigger, False)
 
     @err_to_scratch_buffer.wrap
     def expand_or_jump(self):
